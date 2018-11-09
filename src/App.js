@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Root from './components/Root';
+import store from './redux';
+import { Provider } from 'react-redux';
 
 class App extends Component {
   render() {
-    return (
-      <h1>Hello react!!!</h1>
-    );
+		return (
+			<Provider {...{store}}>
+				<Root />
+			</Provider>
+		);
   }
 }
 
