@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Route } from 'react-router-dom';
+import AdminPage from './routes/AdminPage';
+import AuthPage from './routes/AuthPage';
 
 export default function Root() {
-  return (
-    <div>
-        <h1>Root!!</h1>
-    </div>
-  )
+	return (
+		<>
+			<Route path="/admin" component={AdminPage} />
+			<Route path="/auth" component={AuthPage} />
+		</>
+	)
 }
 
